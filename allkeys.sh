@@ -5,7 +5,7 @@ TEMPALLKEYS=$KEYS/allkeys.jks
 
 gethost() {
   local -r file=$1
-  local -r host=$(openssl x509 -in $file -text -noout -subject | grep subject | cut  -d'=' -f8)
+  local -r host=$(openssl x509 -in $file -text -noout -subject | grep subject | sed -e 's/^.*CN=//')
   echo $host
 }
 
