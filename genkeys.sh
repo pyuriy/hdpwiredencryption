@@ -7,7 +7,7 @@ initdir() {
 
   log "Create self-signed certificate"
 
-  keytool -genkey -alias $ALIAS_NAME -keyalg RSA -keysize 1024 -dname "CN=$HOST_NAME,$ORGDATA" -keystore $KEYSTORE_FILE -storepass $SERVER_KEYPASS_PASSWORD
+  keytool -genkey -alias $ALIAS_NAME -keyalg RSA -keysize 2048 -dname "CN=$HOST_NAME,$ORGDATA" -keystore $KEYSTORE_FILE -storepass $SERVER_KEYPASS_PASSWORD
 
   [ $? -ne 0 ] && logfail "Failed while creating self-signed certificate"
 }
