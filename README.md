@@ -98,7 +98,7 @@ After that, on all hosts, the following directory structure should be created.<b
 
 ## Create self-signed certificates and CSRs
 
-> ./run 3 <br>
+> ./run.sh 3 <br>
 
 Self-signed certificates are created on every node, for every node a CSR is generated and all CSRs are collected in *csrs* directory.
 
